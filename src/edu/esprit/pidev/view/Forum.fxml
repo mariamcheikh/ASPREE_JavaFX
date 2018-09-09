@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="431.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.pidev.view.ForumController">
+   <children>
+      <JFXTextField fx:id="IDForum" editable="false" focusColor="#a84044" layoutX="55.0" layoutY="31.0" promptText="ID_Forum" unFocusColor="#bf0707" />
+      <JFXComboBox fx:id="ID_CategoryForum" focusColor="#a84044" layoutX="55.0" layoutY="101.0" prefHeight="25.0" prefWidth="135.0" promptText="ID_Category" unFocusColor="#bf0707" />
+      <JFXTextField fx:id="NomForum" focusColor="#a84044" layoutX="271.0" layoutY="31.0" promptText="Nom Forum" unFocusColor="#bf0707" />
+      <JFXTextField fx:id="SlugForum" focusColor="#a84044" layoutX="261.0" layoutY="101.0" promptText="Slug Forum" unFocusColor="#bf0707" />
+      <JFXTextArea fx:id="DescForum" focusColor="#a84044" layoutX="499.0" layoutY="44.0" prefHeight="69.0" prefWidth="135.0" promptText="Description Forum" unFocusColor="#bf0707" />
+      <JFXButton fx:id="ajouterForum" layoutX="55.0" layoutY="156.0" onAction="#ajouterForum" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #bf0707;" text="Ajouter Forum" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <TableView fx:id="ForumTable" layoutX="123.0" layoutY="232.0" onMouseClicked="#ShowOnClick" prefHeight="185.0" prefWidth="352.0">
+         <columns>
+            <TableColumn fx:id="ColumnCategForum" prefWidth="75.0" text="Category_ID" />
+            <TableColumn fx:id="ColumnNomForum" prefWidth="75.0" text="Nom Forum" />
+            <TableColumn fx:id="ColumnDescForum" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="ColumnSlugForum" prefWidth="75.0" text="Slug" />
+            <TableColumn fx:id="ColumnIdForum" prefWidth="75.0" text="id" visible="false" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="SupprimerForum" layoutX="215.0" layoutY="156.0" onAction="#SupprimerForum" style="-fx-background-color: #bf0707;" text="Supprimer Forum" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="serachField" focusColor="#a84044" layoutX="313.0" layoutY="195.0" onAction="#serachForum" onInputMethodTextChanged="#serachForum" onKeyReleased="#serachForum" unFocusColor="#bf0707" />
+      <Label layoutX="51.0" layoutY="207.0" text="Veuillez chercher dans la Liste des Forums" />
+      <JFXButton fx:id="BTModif" layoutX="370.0" layoutY="156.0" onAction="#UpdateButtonAction" style="-fx-background-color: #bf0707;" text="Modifier Forum" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="Refresh" layoutX="508.0" layoutY="156.0" onAction="#RefreshButton" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #bf0707;" text="Refresh" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>
